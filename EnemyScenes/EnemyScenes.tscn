@@ -1,0 +1,166 @@
+[gd_scene load_steps=16 format=3 uid="uid://b52nw8yko4l56"]
+
+[ext_resource type="PackedScene" uid="uid://h44uch1hcbvu" path="res://EnemyScenes/Melee.tscn" id="1_uny3x"]
+[ext_resource type="PackedScene" uid="uid://0fxagv432wie" path="res://EnemyScenes/Caster.tscn" id="2_q6sgj"]
+[ext_resource type="PackedScene" uid="uid://dqblna0dlj31r" path="res://EnemyScenes/Cannon.tscn" id="3_2cbbm"]
+[ext_resource type="PackedScene" uid="uid://co5l2ubxjv1ai" path="res://EnemyScenes/Raptor.tscn" id="4_g7r38"]
+[ext_resource type="PackedScene" uid="uid://d0syb34xsvsjd" path="res://EnemyScenes/Krugs.tscn" id="5_urs8b"]
+[ext_resource type="PackedScene" uid="uid://dej484gbrl5f4" path="res://EnemyScenes/Wolf.tscn" id="6_s70au"]
+[ext_resource type="PackedScene" uid="uid://bpx5godn7lokh" path="res://EnemyScenes/Gromp.tscn" id="7_lld8w"]
+[ext_resource type="PackedScene" uid="uid://d0wdnvjxhcjja" path="res://EnemyScenes/BlueBuff.tscn" id="8_73b31"]
+[ext_resource type="PackedScene" uid="uid://x1lhuko1pj2i" path="res://EnemyScenes/RedBuff.tscn" id="9_d7l3o"]
+[ext_resource type="PackedScene" uid="uid://cm17pdf1c3nta" path="res://EnemyScenes/Void.tscn" id="10_4rv0k"]
+[ext_resource type="PackedScene" uid="uid://dvsgp53r323nd" path="res://EnemyScenes/Herald.tscn" id="11_1lpb8"]
+[ext_resource type="PackedScene" uid="uid://dfsd3xgo61i33" path="res://EnemyScenes/Drake.tscn" id="12_7e2u8"]
+[ext_resource type="PackedScene" uid="uid://cktowf8l18nnc" path="res://EnemyScenes/Nashor.tscn" id="13_m0hjq"]
+[ext_resource type="PackedScene" uid="uid://det0xcpw0wsre" path="res://EnemyScenes/Elder.tscn" id="14_7bd52"]
+[ext_resource type="PackedScene" uid="uid://fsa1m0bfeihx" path="res://EnemyScenes/Atakan.tscn" id="15_xmxwt"]
+
+[node name="EnemyScenes" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Melee" parent="." instance=ExtResource("1_uny3x")]
+layout_mode = 0
+offset_left = 646.0
+offset_top = 209.0
+offset_right = 921.0
+offset_bottom = 392.0
+max_hp = 30.0
+ap_reward = 2.0
+
+[node name="Range" parent="." instance=ExtResource("2_q6sgj")]
+layout_mode = 0
+offset_left = 646.0
+offset_top = 209.0
+offset_right = 921.0
+offset_bottom = 392.0
+max_hp = 30.0
+ap_reward = 2.0
+
+[node name="Canon" parent="." instance=ExtResource("3_2cbbm")]
+layout_mode = 0
+offset_left = 646.0
+offset_top = 209.0
+offset_right = 921.0
+offset_bottom = 392.0
+max_hp = 30.0
+gold_reward = 5.0
+
+[node name="Raptor" parent="." instance=ExtResource("4_g7r38")]
+layout_mode = 0
+offset_left = 646.0
+offset_top = 209.0
+offset_right = 921.0
+offset_bottom = 392.0
+max_hp = 30.0
+gold_reward = 5.0
+
+[node name="Crugs" parent="." instance=ExtResource("5_urs8b")]
+layout_mode = 0
+offset_left = 646.0
+offset_top = 209.0
+offset_right = 921.0
+offset_bottom = 392.0
+max_hp = 30.0
+ap_reward = 2.0
+gold_reward = 5.0
+
+[node name="Wolf" parent="." instance=ExtResource("6_s70au")]
+layout_mode = 0
+offset_left = 688.0
+offset_top = 440.0
+offset_right = 963.0
+offset_bottom = 623.0
+max_hp = 30.0
+gold_reward = 5.0
+
+[node name="Gromp" parent="." instance=ExtResource("7_lld8w")]
+layout_mode = 0
+offset_left = 454.0
+offset_top = 375.0
+offset_right = 729.0
+offset_bottom = 558.0
+max_hp = 30.0
+ap_reward = 2.0
+gold_reward = 5.0
+
+[node name="Bluebuff" parent="." instance=ExtResource("8_73b31")]
+layout_mode = 0
+offset_left = 433.0
+offset_top = 482.0
+offset_right = 708.0
+offset_bottom = 665.0
+max_hp = 30.0
+ap_reward = 2.0
+gold_reward = 5.0
+
+[node name="Redbuff" parent="." instance=ExtResource("9_d7l3o")]
+layout_mode = 0
+offset_left = 837.0
+offset_top = 346.0
+offset_right = 1112.0
+offset_bottom = 529.0
+max_hp = 30.0
+ap_reward = 2.0
+gold_reward = 5.0
+
+[node name="Void" parent="." instance=ExtResource("10_4rv0k")]
+layout_mode = 0
+offset_left = 959.0
+offset_top = 86.0
+offset_right = 1234.0
+offset_bottom = 269.0
+max_hp = 30.0
+ap_reward = 2.0
+gold_reward = 5.0
+
+[node name="Herald" parent="." instance=ExtResource("11_1lpb8")]
+layout_mode = 0
+offset_left = 591.0
+offset_top = 91.0
+offset_right = 866.0
+offset_bottom = 274.0
+max_hp = 30.0
+ap_reward = 2.0
+gold_reward = 5.0
+
+[node name="Drake" parent="." instance=ExtResource("12_7e2u8")]
+layout_mode = 0
+offset_left = 301.0
+offset_top = 183.0
+offset_right = 576.0
+offset_bottom = 366.0
+max_hp = 30.0
+ap_reward = 2.0
+gold_reward = 5.0
+
+[node name="Nash" parent="." instance=ExtResource("13_m0hjq")]
+layout_mode = 0
+offset_left = 381.0
+offset_top = 248.0
+offset_right = 656.0
+offset_bottom = 431.0
+max_hp = 30.0
+ap_reward = 2.0
+gold_reward = 5.0
+
+[node name="Elder" parent="." instance=ExtResource("14_7bd52")]
+layout_mode = 0
+offset_left = 307.0
+offset_top = 220.0
+offset_right = 582.0
+offset_bottom = 403.0
+max_hp = 30.0
+ap_reward = 2.0
+gold_reward = 5.0
+
+[node name="Atakan" parent="." instance=ExtResource("15_xmxwt")]
+layout_mode = 0
+offset_left = 239.0
+offset_top = 217.0
+offset_right = 514.0
+offset_bottom = 400.0
+max_hp = 30.0
+ap_reward = 2.0
+gold_reward = 5.0

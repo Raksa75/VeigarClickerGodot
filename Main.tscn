@@ -1,0 +1,107 @@
+[gd_scene load_steps=7 format=3 uid="uid://7r7vfld3vhwe"]
+
+[ext_resource type="Script" uid="uid://d14sej4lkntnv" path="res://Scripts/Main.gd" id="1_3dxm6"]
+[ext_resource type="Script" uid="uid://rwgr84gk0oys" path="res://Scripts/Veigar.gd" id="1_glv2v"]
+[ext_resource type="Script" uid="uid://b3ic7elypunyx" path="res://HUD.gd" id="2_uu6xs"]
+[ext_resource type="Texture2D" uid="uid://dycpao3766ng4" path="res://45.webp" id="3_r0du0"]
+[ext_resource type="Texture2D" uid="uid://dvwj4k76vjcht" path="res://Veigar/blue_still1-fr-1713295206.jpg" id="4_fos0i"]
+[ext_resource type="Script" uid="uid://3beko0o2oj4q" path="res://Shop/shop.gd" id="6_3dxm6"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1152.0
+offset_bottom = -648.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3dxm6")
+
+[node name="Veigar" type="Node" parent="."]
+script = ExtResource("1_glv2v")
+
+[node name="HUD" type="Control" parent="."]
+anchors_preset = 0
+offset_left = -1.0
+offset_top = -3.0
+offset_right = 1151.0
+offset_bottom = 648.0
+script = ExtResource("2_uu6xs")
+
+[node name="ManaBar" type="TextureProgressBar" parent="HUD"]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 466.0
+offset_right = 1990.0
+offset_bottom = 1714.0
+scale = Vector2(0.1, 0.015)
+texture_under = ExtResource("4_fos0i")
+texture_progress = ExtResource("4_fos0i")
+tint_under = Color(0, 0, 0, 1)
+tint_over = Color(0, 0, 0, 1)
+
+[node name="ManaLabel" type="Label" parent="HUD"]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 463.0
+offset_right = 121.0
+offset_bottom = 486.0
+text = "MANA"
+
+[node name="APLabel" type="Label" parent="HUD"]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 418.0
+offset_right = 109.0
+offset_bottom = 441.0
+text = "AP"
+
+[node name="ADLabel" type="Label" parent="HUD"]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 398.0
+offset_right = 110.0
+offset_bottom = 421.0
+text = "AD"
+
+[node name="ASLabel" type="Label" parent="HUD"]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 438.0
+offset_right = 140.0
+offset_bottom = 462.0
+text = "Speed"
+
+[node name="MoneyLabel" type="Label" parent="HUD"]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 487.0
+offset_right = 174.0
+offset_bottom = 510.0
+text = "Essence Bleu "
+
+[node name="VeigarButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 120.0
+offset_right = 329.0
+offset_bottom = 384.0
+icon = ExtResource("3_r0du0")
+icon_alignment = 1
+
+[node name="EnemyContainer" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 379.0
+offset_top = 122.0
+offset_right = 645.0
+offset_bottom = 381.0
+
+[node name="Shop" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 758.0
+offset_right = 1149.0
+offset_bottom = 646.0
+script = ExtResource("6_3dxm6")
+
+[connection signal="pressed" from="VeigarButton" to="Veigar" method="_on_veigar_button_pressed"]

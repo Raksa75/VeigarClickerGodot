@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://bpx5godn7lokh"]
+
+[ext_resource type="Texture2D" uid="uid://cakh33en7ep22" path="res://EnemyScenes/Gromp.webp" id="1_egcyb"]
+[ext_resource type="Script" uid="uid://dplw77dfoai73" path="res://Scripts/Enemy.gd" id="2_ow8ao"]
+[ext_resource type="Texture2D" uid="uid://uvcjffu6du42" path="res://Veigar/360_F_303401956_ufTeSp9EX62zQnJnbed9Q0kEgqaKKL44.jpg" id="3_ow8ao"]
+
+[node name="Gromp" type="TextureRect"]
+offset_left = -1.0
+offset_top = 1.0
+offset_right = 186.0
+offset_bottom = 177.0
+texture = ExtResource("1_egcyb")
+expand_mode = 1
+script = ExtResource("2_ow8ao")
+max_hp = 70
+ap_reward = 3
+gold_reward = 15
+
+[node name="HPBar" type="TextureProgressBar" parent="."]
+offset_left = -17.0
+offset_top = 174.0
+offset_right = 523.0
+offset_bottom = 534.0
+scale = Vector2(0.405, 0.075)
+texture_under = ExtResource("3_ow8ao")
+texture_progress = ExtResource("3_ow8ao")
+tint_under = Color(0, 0, 0, 1)
+
+[node name="HPLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 176.0
+offset_right = -151.0
+offset_bottom = 31.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "HP : "

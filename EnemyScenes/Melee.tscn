@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://h44uch1hcbvu"]
+
+[ext_resource type="Texture2D" uid="uid://4otauq32tf5x" path="res://EnemyScenes/Melee.webp" id="1_i5q8k"]
+[ext_resource type="Script" uid="uid://dplw77dfoai73" path="res://Scripts/Enemy.gd" id="2_7q6a7"]
+[ext_resource type="Texture2D" uid="uid://uvcjffu6du42" path="res://Veigar/360_F_303401956_ufTeSp9EX62zQnJnbed9Q0kEgqaKKL44.jpg" id="3_ry4mn"]
+
+[node name="Melee" type="TextureRect"]
+offset_left = 717.0
+offset_top = 255.0
+offset_right = 906.0
+offset_bottom = 435.0
+texture = ExtResource("1_i5q8k")
+expand_mode = 1
+script = ExtResource("2_7q6a7")
+max_hp = 20
+ap_reward = 1
+
+[node name="HPBar" type="TextureProgressBar" parent="."]
+offset_left = 10.0
+offset_top = 181.0
+offset_right = 550.0
+offset_bottom = 541.0
+scale = Vector2(0.405, 0.075)
+texture_under = ExtResource("3_ry4mn")
+texture_progress = ExtResource("3_ry4mn")
+tint_under = Color(0, 0, 0, 1)
+
+[node name="HPLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 23.0
+offset_top = 183.0
+offset_right = -131.0
+offset_bottom = 38.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "HP : "

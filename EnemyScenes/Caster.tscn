@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://0fxagv432wie"]
+
+[ext_resource type="Texture2D" uid="uid://c7xb83v3r0e8c" path="res://EnemyScenes/Caster.webp" id="1_radgo"]
+[ext_resource type="Script" uid="uid://dplw77dfoai73" path="res://Scripts/Enemy.gd" id="2_q68dk"]
+[ext_resource type="Texture2D" uid="uid://uvcjffu6du42" path="res://Veigar/360_F_303401956_ufTeSp9EX62zQnJnbed9Q0kEgqaKKL44.jpg" id="3_l14af"]
+
+[node name="Range" type="TextureRect"]
+offset_left = 700.0
+offset_top = 233.0
+offset_right = 851.0
+offset_bottom = 389.0
+texture = ExtResource("1_radgo")
+expand_mode = 1
+script = ExtResource("2_q68dk")
+max_hp = 25
+ap_reward = 1
+
+[node name="HPBar" type="TextureProgressBar" parent="."]
+offset_left = -27.0
+offset_top = 177.0
+offset_right = 513.0
+offset_bottom = 537.0
+scale = Vector2(0.405, 0.075)
+texture_under = ExtResource("3_l14af")
+texture_progress = ExtResource("3_l14af")
+tint_under = Color(0, 0, 0, 1)
+
+[node name="HPLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -3.0
+offset_top = 179.0
+offset_right = -119.0
+offset_bottom = 46.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "HP : "

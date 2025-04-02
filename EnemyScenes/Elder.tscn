@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://det0xcpw0wsre"]
+
+[ext_resource type="Texture2D" uid="uid://baofc7a6x14a7" path="res://EnemyScenes/Elder.webp" id="1_kvdg8"]
+[ext_resource type="Script" uid="uid://dplw77dfoai73" path="res://Scripts/Enemy.gd" id="2_n47fn"]
+[ext_resource type="Texture2D" uid="uid://uvcjffu6du42" path="res://Veigar/360_F_303401956_ufTeSp9EX62zQnJnbed9Q0kEgqaKKL44.jpg" id="3_n47fn"]
+
+[node name="Elder" type="TextureRect"]
+offset_top = 3.0
+offset_right = 265.0
+offset_bottom = 177.0
+texture = ExtResource("1_kvdg8")
+expand_mode = 1
+script = ExtResource("2_n47fn")
+max_hp = 250
+ap_reward = 12
+gold_reward = 80
+
+[node name="HPBar" type="TextureProgressBar" parent="."]
+offset_left = 6.0
+offset_top = 173.0
+offset_right = 546.0
+offset_bottom = 533.0
+scale = Vector2(0.405, 0.075)
+texture_under = ExtResource("3_n47fn")
+texture_progress = ExtResource("3_n47fn")
+tint_under = Color(0, 0, 0, 1)
+
+[node name="HPLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 25.0
+offset_top = 174.0
+offset_right = -131.0
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "HP : "

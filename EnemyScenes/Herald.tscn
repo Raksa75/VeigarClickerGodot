@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://dvsgp53r323nd"]
+
+[ext_resource type="Texture2D" uid="uid://cvgrg16qok7nl" path="res://EnemyScenes/Herald.webp" id="1_trls1"]
+[ext_resource type="Script" uid="uid://dplw77dfoai73" path="res://Scripts/Enemy.gd" id="2_4hnrg"]
+[ext_resource type="Texture2D" uid="uid://uvcjffu6du42" path="res://Veigar/360_F_303401956_ufTeSp9EX62zQnJnbed9Q0kEgqaKKL44.jpg" id="3_4hnrg"]
+
+[node name="Herald" type="TextureRect"]
+offset_left = -2.0
+offset_top = -1.0
+offset_right = 229.0
+offset_bottom = 166.0
+texture = ExtResource("1_trls1")
+expand_mode = 1
+script = ExtResource("2_4hnrg")
+max_hp = 120
+ap_reward = 6
+gold_reward = 30
+
+[node name="HPBar" type="TextureProgressBar" parent="."]
+offset_left = 9.0
+offset_top = 169.0
+offset_right = 549.0
+offset_bottom = 529.0
+scale = Vector2(0.405, 0.075)
+texture_under = ExtResource("3_4hnrg")
+texture_progress = ExtResource("3_4hnrg")
+tint_under = Color(0, 0, 0, 1)
+
+[node name="HPLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 29.0
+offset_top = 171.0
+offset_right = -127.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "HP : "

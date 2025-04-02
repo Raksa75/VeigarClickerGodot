@@ -1,0 +1,86 @@
+[gd_scene load_steps=5 format=3 uid="uid://7r7vfld3vhwe"]
+
+[ext_resource type="Script" uid="uid://d14sej4lkntnv" path="res://Scripts/Main.gd" id="1_3dxm6"]
+[ext_resource type="Script" uid="uid://rwgr84gk0oys" path="res://Scripts/Veigar.gd" id="1_glv2v"]
+[ext_resource type="Script" uid="uid://b3ic7elypunyx" path="res://HUD.gd" id="2_uu6xs"]
+[ext_resource type="Texture2D" uid="uid://dycpao3766ng4" path="res://45.webp" id="3_r0du0"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1152.0
+offset_bottom = -648.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3dxm6")
+
+[node name="Veigar" type="Node" parent="."]
+script = ExtResource("1_glv2v")
+
+[node name="HUD" type="Control" parent="."]
+anchors_preset = 0
+offset_left = -1.0
+offset_top = -3.0
+offset_right = 1151.0
+offset_bottom = 648.0
+script = ExtResource("2_uu6xs")
+
+[node name="ManaLabel" type="Label" parent="HUD"]
+layout_mode = 0
+offset_left = 191.0
+offset_top = 458.0
+offset_right = 240.0
+offset_bottom = 481.0
+text = "MANA"
+
+[node name="APLabel" type="Label" parent="HUD"]
+layout_mode = 0
+offset_left = 190.0
+offset_top = 413.0
+offset_right = 230.0
+offset_bottom = 436.0
+text = "AP"
+
+[node name="ADLabel" type="Label" parent="HUD"]
+layout_mode = 0
+offset_left = 191.0
+offset_top = 389.0
+offset_right = 231.0
+offset_bottom = 412.0
+text = "AD"
+
+[node name="ASLabel" type="Label" parent="HUD"]
+layout_mode = 0
+offset_left = 190.0
+offset_top = 434.0
+offset_right = 260.0
+offset_bottom = 458.0
+text = "Speed"
+
+[node name="MoneyLabel" type="Label" parent="HUD"]
+layout_mode = 0
+offset_left = 190.0
+offset_top = 478.0
+offset_right = 294.0
+offset_bottom = 501.0
+text = "Essence Bleu "
+
+[node name="VeigarButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 185.0
+offset_top = 114.0
+offset_right = 449.0
+offset_bottom = 378.0
+icon = ExtResource("3_r0du0")
+icon_alignment = 1
+
+[node name="EnemyContainer" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 720.0
+offset_top = 143.0
+offset_right = 1013.0
+offset_bottom = 378.0
+
+[connection signal="pressed" from="VeigarButton" to="Veigar" method="_on_veigar_button_pressed"]

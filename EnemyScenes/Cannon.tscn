@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://dqblna0dlj31r"]
+
+[ext_resource type="Texture2D" uid="uid://cbpdlr8oiremn" path="res://EnemyScenes/Canon.webp" id="1_5l0i5"]
+[ext_resource type="Script" uid="uid://dplw77dfoai73" path="res://Scripts/Enemy.gd" id="2_a0qh8"]
+[ext_resource type="Texture2D" uid="uid://uvcjffu6du42" path="res://Veigar/360_F_303401956_ufTeSp9EX62zQnJnbed9Q0kEgqaKKL44.jpg" id="3_6561n"]
+
+[node name="Canon" type="TextureRect"]
+offset_left = 1.0
+offset_top = -3.0
+offset_right = 182.0
+offset_bottom = 178.0
+texture = ExtResource("1_5l0i5")
+expand_mode = 1
+script = ExtResource("2_a0qh8")
+max_hp = 35
+gold_reward = 10
+
+[node name="HPBar" type="TextureProgressBar" parent="."]
+offset_left = -13.0
+offset_top = 183.0
+offset_right = 527.0
+offset_bottom = 543.0
+scale = Vector2(0.405, 0.075)
+texture_under = ExtResource("3_6561n")
+texture_progress = ExtResource("3_6561n")
+tint_under = Color(0, 0, 0, 1)
+
+[node name="HPLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 184.0
+offset_right = -144.0
+offset_bottom = 39.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "HP : "

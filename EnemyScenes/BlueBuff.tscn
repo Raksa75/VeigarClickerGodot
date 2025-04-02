@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://d0wdnvjxhcjja"]
+
+[ext_resource type="Texture2D" uid="uid://ddhc0dl7i12m6" path="res://EnemyScenes/BlueBuff.webp" id="1_4bkh5"]
+[ext_resource type="Script" uid="uid://dplw77dfoai73" path="res://Scripts/Enemy.gd" id="2_ho2c5"]
+[ext_resource type="Texture2D" uid="uid://uvcjffu6du42" path="res://Veigar/360_F_303401956_ufTeSp9EX62zQnJnbed9Q0kEgqaKKL44.jpg" id="3_x0kpc"]
+
+[node name="BlueBuff" type="TextureRect"]
+offset_left = -2.0
+offset_top = 1.0
+offset_right = 220.0
+offset_bottom = 162.0
+texture = ExtResource("1_4bkh5")
+expand_mode = 1
+script = ExtResource("2_ho2c5")
+max_hp = 80
+ap_reward = 4
+gold_reward = 18
+
+[node name="HPBar" type="TextureProgressBar" parent="."]
+offset_left = 4.0
+offset_top = 163.0
+offset_right = 544.0
+offset_bottom = 523.0
+scale = Vector2(0.405, 0.075)
+texture_under = ExtResource("3_x0kpc")
+texture_progress = ExtResource("3_x0kpc")
+tint_under = Color(0, 0, 0, 1)
+
+[node name="HPLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 35.0
+offset_top = 163.0
+offset_right = -121.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "HP : "
